@@ -1,0 +1,63 @@
+:root {
+  --bgcolor: #000000;
+  --fgcolor: #999999;
+  --linkcolor: #9999ff;
+  --visitedcolor: #ff00ff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bgcolor: #f0f0f0;
+    --fgcolor: #000000;
+    --linkcolor: #0000ff;
+    --visitedcolor: #ff00ff;
+  }
+}
+
+html {
+  background-color: var(--bgcolor);
+  color: var(--fgcolor);
+  max-width: 80ch;
+  padding: 2ch;
+  margin: auto;
+  margin-bottom: 2ex;
+  font-family: monospace;
+  font-size: 1.25vw;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+a:link {
+  color: var(--linkcolor);
+}
+
+a:visited {
+  color: var(--visitedcolor);
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+address {
+  display: block;
+  background-color: var(--bgcolor);
+  position: fixed;
+  bottom: 0;
+  width: 80ch;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  address {
+    width: calc(100% - 4ch);
+  }
+}
